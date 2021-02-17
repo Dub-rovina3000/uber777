@@ -1,0 +1,329 @@
+$main_color: #1eacc7
+
+
+*
+    font-family: 'Roboto', sans-serif
+
+header
+    position: relative
+
+nav
+    height: 51px
+    background-color: #212121
+    width: 100%
+    position: fixed
+    z-index: 5
+
+.menu
+    display: flex
+    justify-content: space-between
+    padding: 13px 70px
+    margin: 0
+    list-style-type: none
+
+    .menu_link
+        color: #ffffff
+        font-size: 15px
+        font-weight: 300
+        text-decoration: none
+
+    .menu_item
+        border-right: 2px dotted black
+        padding-right: 28px
+
+.subheader
+    position: absolute
+    top: 50px
+    width: 100%
+    height: 84px
+    background-color: rgba(0, 0, 0, 0.6)
+
+    .subheader_logo
+        display: block
+        max-width: 100%
+        margin-top: 16px
+
+    .subheader_official
+        margin-top: 6px
+        opacity: 0.5
+        color: #ffffff
+        font-size: 13px
+        font-weight: 400
+        text-align: left
+
+    .subheader_call
+        color: #ffffff
+        font-size: 12px
+        font-weight: 300
+        margin-top: 19px
+        text-align: right
+
+    .subheader_phone
+        display: block
+        margin-top: 8px
+        color: #ffffff
+        font-size: 22px
+        font-weight: 400
+        text-transform: uppercase
+        text-align: right
+        line-height: 12px
+        text-decoration: none
+
+    .subheader_btn
+        margin-top: 19px
+        width: 172px
+        height: 46px
+        box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.12)
+        border: none
+        border-radius: 4px
+        background-image: linear-gradient(to top, $main_color 0%, #4ce2ff 100%)
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21)
+        color: #ffffff
+        font-size: 14px
+        font-weight: 400
+        font-style: normal
+        letter-spacing: normal
+        text-align: center
+        text-transform: uppercase
+        line-height: normal
+
+.promo
+    min-height: 800px
+    background: url('../img/bg/main_bg.jpg') center (center / cover) no-repeat
+    padding: 200px 0 135px 0
+
+    .promo_header
+        color: #ffffff
+        font-weight: 700
+        font-style: normal
+        letter-spacing: normal
+        text-align: center
+        text-transform: uppercase
+        font-size: 60px
+        line-height: 60px
+        margin: 0
+
+    .promo_subheader
+        color: #ffffff
+        font-weight: 700
+        font-style: normal
+        letter-spacing: normal
+        text-transform: uppercase
+        text-align: center
+        font-size: 36px
+        line-height: 36px
+        margin: 0
+        margin-top: 22px
+
+    .promo_descr
+        color: #ffffff
+        font-size: 18px
+        font-weight: 400
+        font-style: normal
+        letter-spacing: normal
+        line-height: 24px
+        text-align: center
+        font-style: normal
+        letter-spacing: normal
+        line-height: normal
+        margin-top: 23px
+
+    .promo_btn
+        display: block
+        margin: 118px auto 0 auto
+        width: 259px
+        height: 63px
+        box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.12)
+        border: none
+        border-radius: 4px
+        background-image: linear-gradient(to top, $main_color 0%, #4ce2ff 100%)
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21)
+        color: #ffffff
+        font-size: 18px
+        font-weight: 400
+        text-align: center
+        text-transform: uppercase
+        font-style: normal
+        letter-spacing: normal
+        line-height: normal
+
+.eight_reasons
+    min-height: 900px
+    padding: 71px 0 65px 0
+
+    .row
+        margin-top: 40px
+        min-height: 635px
+        display: flex
+
+    .object
+        display: flex
+        align-items: center
+        justify-content: center
+
+        .eight_rounds
+            width: 113px
+            height: 113px
+            background-color: $main_color
+            border-radius: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+            margin-right: 26px
+
+        .eight_inrounds
+            max-width: 100%
+            display: block
+
+        .eight_descr
+            width: 343px
+            color: #202020
+            font-size: 15px
+            font-weight: 300
+            font-style: normal
+            letter-spacing: normal
+            text-align: left
+            line-height: 21px
+
+        span
+            color: #1eacc7
+            font-size: 17px
+            font-weight: 400
+            font-style: normal
+            letter-spacing: normal
+
+.advantages
+    display: block
+    margin: 0 auto
+    width: 112px
+    height: 24px
+    color: #ffffff
+    font-size: 11px
+    font-weight: 400
+    font-style: normal
+    letter-spacing: normal
+    text-align: center
+    text-transform: uppercase
+    line-height: normal
+    background-color: #000
+    line-height: 23px
+
+    &_white
+        background-color: #ffffff
+        color: #070716
+
+.eight_reasons_header
+    color: #222222
+    font-size: 38px
+    font-weight: 700
+    font-style: normal
+    letter-spacing: normal
+    text-align: center
+    text-transform: uppercase
+    line-height: normal
+    margin-top: 38px
+    margin-bottom: 0
+
+    &_white
+        color: #ffffff
+        margin-top: 32px
+
+.subtitle
+    color: #222222
+    font-size: 17px
+    font-weight: 400
+    line-height: 21px
+    text-align: center
+    font-style: normal
+    letter-spacing: normal
+    line-height: normal
+    margin-top: 19px
+
+    &_white
+        color: #ffffff
+
+.mobile 
+    min-height: 864px
+    padding: 48px 0 79px 0
+    background: url('../img/bg/second_bg.jpg') center (center / cover) no-repeat
+
+    .row 
+        margin-top: 32px
+
+    &_item
+        position: relative
+        width: 320px
+        height: 280px
+        margin: 0 auto
+        padding: 92px 0 35px 0
+        margin-bottom: 19px
+
+        &_1
+            background: url('../img/mobile_app/1_one_touch.png') center (center / cover) no-repeat
+
+        &_2
+            background: url('../img/mobile_app/2_reliable_supply.png') center (center / cover) no-repeat
+
+        &_3
+            background: url('../img/mobile_app/3_clear_prices.png') center (center / cover) no-repeat
+
+        &_4
+            background: url('../img/mobile_app/4_no_cash.png') center (center / cover) no-repeat
+
+        &_5
+            background: url('../img/mobile_app/5_feedback.png') center (center / cover) no-repeat
+
+        &_6
+            background: url('../img/mobile_app/6_split_price.png') center (center / cover) no-repeat
+
+        &_subtitle
+            color: #ffffff
+            font-size: 24px
+            font-weight: 400
+            text-align: center
+            text-transform: uppercase
+            font-style: normal
+            letter-spacing: normal
+            line-height: normal
+        
+        &_plus
+            display: flex
+            justify-content: center
+            align-items: center
+            position: absolute
+            bottom: 35px
+            left: 50%
+            transform: translateX(-50%)
+            width: 26px
+            height: 26px
+            background-color: #000000
+            border-radius: 100%
+            margin: 0 auto
+            padding: 6px
+            cursor: pointer
+            
+.uberx
+    min-height: 896px
+    background: linear-gradient(to bottom, #070716 499px, rgba(255, 255, 255, 0) 499px), url('../img/bg/second_bg.jpg') 0px 499px no-repeat
+    padding: 57px 0 138px 0
+
+    &_img
+        margin-top: 56px
+        img
+            display: block
+            margin: 0 auto
+
+    &_text
+        margin-top: 4px
+        text-align: center
+        color: #222222
+        font-size: 17px
+        font-weight: 300
+        font-style: normal
+        letter-spacing: normal
+        line-height: normal
+
+
+
+
+
