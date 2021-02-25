@@ -1,5 +1,10 @@
 $main_color: #1eacc7
+$second_color: #ff5656
 
+=btn_hover
+    &:hover
+        background-image: none
+        background-color: $main-color
 
 *
     font-family: 'Roboto', sans-serif
@@ -21,13 +26,13 @@ nav
     margin: 0
     list-style-type: none
 
-    .menu_link
+    &_link
         color: #ffffff
         font-size: 15px
         font-weight: 300
         text-decoration: none
 
-    .menu_item
+    &_item
         border-right: 2px dotted black
         padding-right: 28px
 
@@ -38,12 +43,12 @@ nav
     height: 84px
     background-color: rgba(0, 0, 0, 0.6)
 
-    .subheader_logo
+    &_logo
         display: block
         max-width: 100%
         margin-top: 16px
 
-    .subheader_official
+    &_official
         margin-top: 6px
         opacity: 0.5
         color: #ffffff
@@ -51,14 +56,14 @@ nav
         font-weight: 400
         text-align: left
 
-    .subheader_call
+    &_call
         color: #ffffff
         font-size: 12px
         font-weight: 300
         margin-top: 19px
         text-align: right
 
-    .subheader_phone
+    &_phone
         display: block
         margin-top: 8px
         color: #ffffff
@@ -69,7 +74,7 @@ nav
         line-height: 12px
         text-decoration: none
 
-    .subheader_btn
+    &_btn
         margin-top: 19px
         width: 172px
         height: 46px
@@ -86,13 +91,14 @@ nav
         text-align: center
         text-transform: uppercase
         line-height: normal
+        +btn_hover
 
 .promo
     min-height: 800px
     background: url('../img/bg/main_bg.jpg') center (center / cover) no-repeat
     padding: 200px 0 135px 0
 
-    .promo_header
+    &_header
         color: #ffffff
         font-weight: 700
         font-style: normal
@@ -103,7 +109,7 @@ nav
         line-height: 60px
         margin: 0
 
-    .promo_subheader
+    &_subheader
         color: #ffffff
         font-weight: 700
         font-style: normal
@@ -115,7 +121,7 @@ nav
         margin: 0
         margin-top: 22px
 
-    .promo_descr
+    &_descr
         color: #ffffff
         font-size: 18px
         font-weight: 400
@@ -128,7 +134,7 @@ nav
         line-height: normal
         margin-top: 23px
 
-    .promo_btn
+    &_btn
         display: block
         margin: 118px auto 0 auto
         width: 259px
@@ -146,6 +152,7 @@ nav
         font-style: normal
         letter-spacing: normal
         line-height: normal
+        +btn_hover
 
 .eight_reasons
     min-height: 900px
@@ -301,6 +308,28 @@ nav
             margin: 0 auto
             padding: 6px
             cursor: pointer
+            &::before
+                content: ''
+                display: block
+                width: 14px
+                height: 2px
+                background-color: $main_color
+                transition: 0.3s all
+            &::after
+                content: ''
+                position: absolute
+                left: 50%
+                transform: translateX(-50%)
+                display: block
+                height: 14px
+                width: 2px
+                background-color: $main_color
+                transition: 0.3s all
+
+            &:hover
+                &::after , &::before
+                    background-color: $second_color
+                
             
 .uberx
     min-height: 896px
@@ -322,6 +351,178 @@ nav
         font-style: normal
         letter-spacing: normal
         line-height: normal
+        
+.require
+    padding: 68px 0 84px 0
+
+    &_block
+        margin: 33px 0
+        &_nmb
+            margin-bottom: 0px
+    &_title
+        font-style: normal
+        font-weight: normal
+        font-size: 22px
+        color: #1CA8C3
+        font-weight: 400
+
+    &_list
+        list-style-type: none
+        padding-left: 50px
+        margin-top: 20px
+        li
+            position: relative
+            font-style: normal
+            font-weight: 300
+            font-size: 17px
+            line-height: 24px
+            color: #222222
+            margin-bottom: 10px
+            &::before
+                content: ''
+                display: block
+                position: absolute
+                left: -32px
+                top: 3px
+                width: 21px
+                height: 20px
+                background: url('../icons/good_icon.svg') center (center/cover) no-repeat
+    &_desc
+        font-style: normal;
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 24px;
+        margin-top: 15px
+        color: #1CA8C3;
+
+    .warning
+        .require_title
+            color: $second_color
+        .require_list
+            li
+                &::before
+                    background: url('../icons/bad_icon.svg') center (center/cover) no-repeat
+
+.everywhere
+    min-height: 720px
+    background: url('../img/bg/cities_bg.jpg') center (center/cover) no-repeat
+    padding: 46px 0 22px 0
+    position: relative
+
+    a
+        font-style: normal
+        font-weight: normal
+        font-size: 15px
+        font-weight: 400
+        text-transform: uppercase
+        color: #1FBAD6
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        bottom: 55px
+        text-decoration: none
+
+        
+footer
+    min-height: 157px
+    padding: 11px 0 45px 17px
+    position: relative
+    display: flex
+    align-items: center
+    .btn
+        position: absolute
+        top: 48px
+        display: flex
+        justify-content: center
+        align-items: center
+
+        .footer_btn
+            width: 35px
+            height: 35px
+            background-color: #070716
+            border: none
+            border-radius: 100%
+            margin-left: 6px
+            background-repeat: no-repeat
+            background-position: center
+
+            &_1
+                background-image: url('../icons/facebook.svg')
+            &_2
+                background-image: url('../icons/twitter.svg')
+            &_3
+                background-image: url('../icons/linkedin.svg') 
+            &_4
+                background-image: url('../icons/instagram.svg')
+    .references
+        font-style: normal
+        font-weight: normal
+        font-size: 11px
+        font-weight: 300
+        text-align: center
+        text-transform: uppercase
+        width: 100%
+        position: relative
+        
+        .main
+            font-size: 15px
+            text-decoration: none
+            color: #070716
+            margin-top: 38px
+            &_2
+                margin-left: 39px 
+            &_3
+                margin-left: 39px 
+
+        .minors
+            margin-top: 10px
+            .minor
+                color: #999999
+                text-decoration: none
+                margin-left: 15px
+                &_1
+                    margin-left: 0
+
+        .language
+            margin-top: 10px
+            font-weight: 400
+            color: #1FBAD6
+
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+            width: 301px
+            height: 5px
+            background: #1FBAD6
+            border: none
+
+    .stores
+        position: absolute
+        top: 51px
+        right: 21px
+        display: flex
+        justify-content: center
+        align-items: center
+
+        .stores_a
+            width: 95px
+            height: 27px
+            border: none
+            border-radius: 5%
+            margin-left: 6px
+            background-repeat: no-repeat
+            background-position: center
+            &_1
+                background-image: url('../icons/apple_store_icon.png')
+            &_2
+                background-image: url('../icons/google_play_icon.png')
+            &_3
+                background-image: url('../icons/windows_store_icon.png') 
+        
+        
 
 
 
